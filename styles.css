@@ -1,0 +1,307 @@
+/* nunito-200 - latin-ext */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/nunito-v25-latin-ext-200.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/nunito-v25-latin-ext-200.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/nunito-v25-latin-ext-200.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/nunito-v25-latin-ext-200.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/nunito-v25-latin-ext-200.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/fonts/nunito-v25-latin-ext-200.svg#Nunito")
+      format("svg"); /* Legacy iOS */
+}
+/* nunito-regular - latin-ext */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/nunito-v25-latin-ext-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/nunito-v25-latin-ext-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/nunito-v25-latin-ext-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/nunito-v25-latin-ext-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/nunito-v25-latin-ext-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/fonts/nunito-v25-latin-ext-regular.svg#Nunito") format("svg"); /* Legacy iOS */
+}
+/* nunito-600 - latin-ext */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/nunito-v25-latin-ext-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/nunito-v25-latin-ext-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/nunito-v25-latin-ext-600.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/nunito-v25-latin-ext-600.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/nunito-v25-latin-ext-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/fonts/nunito-v25-latin-ext-600.svg#Nunito")
+      format("svg"); /* Legacy iOS */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  display: block;
+  text-transform: uppercase;
+  color: #f8f8f8;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 29px;
+}
+
+label,
+.change-later {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 29px;
+  color: #2029c5;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+input[type="number"] {
+  text-align: center;
+  font-size: 21px;
+  border: none;
+  background: #f0f0f0;
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 1px 0;
+}
+
+input[type="number"]:first-child {
+  margin: 10px 0 5px 0;
+}
+
+input[type="number"]:focus,
+/* input[type="number"]:focus-visible, */
+input[type="number"]:active {
+  border: 1px solid #343ed2 !important;
+  outline: none;
+  padding: 0;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+/* input[type="number"]:not(:first-child) */
+
+.main-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+}
+
+.banner {
+  background: linear-gradient(342.62deg, #b2b7ed -87.13%, #3742d4 72.52%);
+  border: 0.1px solid #949494;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10px 0;
+  border-radius: 20px;
+  padding: 17px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-image {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.label-border {
+  width: 100%;
+  border-top: 1px solid #c7d1d9;
+  border-bottom: 1px solid #c7d1d9;
+}
+
+.expense-border {
+  width: 25%;
+  margin: 0 auto;
+  border-bottom: 1px solid #c7d1d9;
+}
+
+#bigBox,
+#bigBox2,
+#bigBox3 {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#btnNode,
+#btnNode2,
+#btnNode3 {
+  border-radius: 5px;
+  width: 151px;
+  background: linear-gradient(342.62deg, #b2b7ed -87.13%, #3742d4 72.52%);
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 15px auto 40px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2px 0;
+  font-size: 13px;
+}
+
+#btnSum {
+  /* background: linear-gradient(129.45deg, #1820bf 9.85%, #7686ff 74.1%); */
+  background: linear-gradient(342.62deg, #b2b7ed -87.13%, #3742d4 72.52%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  /* transition: background 1s; */
+}
+
+#btnSum > p {
+  display: block;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 41px;
+  margin: 0;
+}
+
+p#sentence {
+  font-size: 23px;
+}
+
+/* #btnSum:hover {
+  background: #2c45ff;
+} */
+
+.random {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 5px;
+}
+
+#wholeSum {
+  color: #fff;
+  font-weight: 200;
+  font-size: 21px;
+  line-height: 29px;
+}
+
+#settle-up {
+  display: none;
+  background: linear-gradient(342.62deg, #b2b7ed -87.13%, #3742d4 72.52%);
+  border: 1px solid #949494;
+  border-radius: 20px;
+  padding: 30px 10px;
+}
+
+.settle-up p {
+  margin: 0;
+}
+
+.PersonText,
+.PersonText2,
+.PersonText3 {
+  margin: 5px 0;
+}
+
+#radio-container,
+#radio-container2 {
+  margin: 5px 0;
+}
+
+@media (max-width: 1200px) {
+  .main-wrapper {
+    padding: 0 5% 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .expense-border {
+    width: 40%;
+  }
+  .banner {
+    padding: 10px;
+  }
+
+  #settle-up {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 550px) {
+  .expense-border {
+    width: 50%;
+  }
+}
+
+@media (max-width: 430px) {
+  h1,
+  p#sentence,
+  #btnSum > p {
+    font-size: 18px;
+  }
+
+  img {
+    width: 75%;
+  }
+
+  .expense-border {
+    width: 60%;
+  }
+}
+
+@media (max-width: 350px) {
+  .expense-border {
+    width: 70%;
+  }
+
+  p#sentence {
+    font-size: 20px !important;
+  }
+}
+/*
+1. Zmienić ścieżkę grafiki na składnię phpową (na githubie)
+X 2. Powiększanie się inputów na active/focus
+3. Kolor radio:checked
+*/

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/pink.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Expense Splitting Calculator</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="banner">
+        <h1>Expense splitting calculator</h1>
+      </div>
+      <div class="banner-image">
+        <img src="/img/banner-image.png" />
+      </div>
+      <form id="mainForm">
+        <div class="random">
+          <div class="label-border">
+            <label>Iza</label>
+          </div>
+          <div id="bigBox">
+            <input
+              type="number"
+              min="0"
+              step="0.01"
+              placeholder="0.00"
+              class="PersonText"
+            />
+          </div>
+
+          <div id="btnNode">ADD EXPENSE</div>
+          <div class="expense-border">
+            <p
+              style="
+                text-transform: uppercase;
+                margin: 10px 0 0 0;
+                color: rgba(0, 0, 0, 0.3);
+              "
+            >
+              Iza's total expense:
+            </p>
+          </div>
+          <p
+            id="person1Sum"
+            style="margin: 5px 0 0 0; font-size: 21px; line-height: 29px"
+          >
+            0.00
+          </p>
+        </div>
+        <div class="random">
+          <div class="label-border">
+            <label>Kuba</label>
+          </div>
+          <div id="bigBox2">
+            <input
+              type="number"
+              min="0"
+              step="0.01"
+              placeholder="0.00"
+              class="PersonText2"
+            />
+          </div>
+          <!-- </label> -->
+          <div id="btnNode2">ADD EXPENSE</div>
+          <div class="expense-border">
+            <p
+              style="
+                text-transform: uppercase;
+                margin: 10px 0 0 0;
+                color: rgba(0, 0, 0, 0.3);
+              "
+            >
+              Kuba's total expense:
+            </p>
+          </div>
+          <p
+            id="person2Sum"
+            style="margin: 5px 0 0 0; font-size: 21px; line-height: 29px"
+          >
+            0.00
+          </p>
+        </div>
+        <div class="random">
+          <div class="label-border">
+            <label>Rest</label>
+          </div>
+          <div id="bigBox3">
+            <input
+              type="number"
+              min="0"
+              step="0.01"
+              placeholder="0.00"
+              class="PersonText3"
+            />
+          </div>
+          <div id="btnNode3">ADD EXPENSE</div>
+          <div class="expense-border">
+            <p
+              style="
+                text-transform: uppercase;
+                margin: 10px 0 0 0;
+                color: rgba(0, 0, 0, 0.3);
+              "
+            >
+              Total shared expense:
+            </p>
+          </div>
+          <p
+            id="restSum"
+            style="margin: 5px 0 0 0; font-size: 21px; line-height: 29px"
+          >
+            0.00
+          </p>
+        </div>
+        <div class="random">
+          <div class="label-border">
+            <p class="change-later" style="margin: 0">Who paid?</p>
+          </div>
+          <div id="radio-container">
+            <input type="radio" name="testowe" id="radio1" />
+            <label style="color: #b3b3b3">Iza</label>
+          </div>
+          <div id="radio-container2">
+            <input type="radio" name="testowe" id="radio2" />
+            <label style="color: #b3b3b3">Kuba</label>
+          </div>
+        </div>
+        <button type="submit" id="btnSum">
+          <p>CALCULATE</p>
+        </button>
+      </form>
+      <div id="settle-up">
+        <p
+          id="sentence"
+          style="text-transform: uppercase; color: #fff; margin: 0 0 10px 0"
+        ></p>
+        <div class="expense-border">
+          <p
+            style="
+              text-transform: uppercase;
+              font-weight: 600;
+              font-size: 13px;
+              line-height: 18px;
+              color: #fff;
+              margin: 20px 0 0 0;
+            "
+          >
+            Grand total
+          </p>
+        </div>
+        <p id="wholeSum" style="margin: 0">0.00z</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
