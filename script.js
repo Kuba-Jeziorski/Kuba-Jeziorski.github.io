@@ -67,13 +67,96 @@ document.getElementById("mainForm").addEventListener("submit", function (e) {
   const sent = document.getElementById("sentence");
 
   if (document.getElementById("radio1").checked) {
-    sent.innerHTML = `Kuba owes ${kSum} PLN to Iza`;
+    if (document.getElementById("language").checked) {
+      sent.innerHTML = `Kuba musi oddać ${kSum} PLN Izie`;
+    } else {
+      sent.innerHTML = `Kuba owes ${kSum} PLN to Iza`;
+    }
   } else if (document.getElementById("radio2").checked) {
-    sent.innerHTML = `Iza owes ${iSum} PLN to Kuba`;
+    if (document.getElementById("language").checked) {
+      sent.innerHTML = `Iza musi oddać ${kSum} PLN Kubie`;
+    } else {
+      sent.innerHTML = `Iza owes ${kSum} PLN to Kuba`;
+    }
   } else {
-    sent.innerHTML = "Radio button is not checked!";
+    if (document.getElementById("language").checked) {
+      sent.innerHTML = "Nie określono kupującego";
+    } else {
+      sent.innerHTML = "Radio button is not checked!";
+    }
   }
 
   document.getElementById("settle-up").style.display = "block";
   window.scrollBy(0, 200);
+});
+
+document.getElementById("dark-mode").addEventListener("click", function () {
+  if (document.getElementById("dark-mode").checked) {
+    document.body.style.background = "#000";
+    document.getElementsByClassName("partial-total")[0].style.color = "#fff";
+    document.getElementsByClassName("partial-total")[1].style.color = "#fff";
+    document.getElementsByClassName("partial-total")[2].style.color = "#fff";
+    document.getElementById("person1Sum").style.color = "rgba(255,255,255,1)";
+    document.getElementById("person2Sum").style.color = "rgba(255,255,255,1)";
+    document.getElementById("restSum").style.color = "rgba(255,255,255,1)";
+    document.getElementById("dark-mode-p").style.color = "#fff";
+    document.getElementById("dark-mode").style.background = "#000";
+    document.getElementById("dark-mode").style.border = "2px solid #fff";
+    document.getElementById("language-p").style.color = "#fff";
+    document.getElementById("language").style.background = "#000";
+    document.getElementById("language").style.border = "2px solid #fff";
+  } else {
+    document.body.style.background = "#fff";
+    document.getElementsByClassName("partial-total")[0].style.color =
+      "rgba(0, 0, 0, 0.3)";
+    document.getElementsByClassName("partial-total")[1].style.color =
+      "rgba(0, 0, 0, 0.3)";
+    document.getElementsByClassName("partial-total")[2].style.color =
+      "rgba(0, 0, 0, 0.3)";
+    document.getElementById("person1Sum").style.color = "rgba(0,0,0,0.5)";
+    document.getElementById("person2Sum").style.color = "rgba(0,0,0,0.5)";
+    document.getElementById("restSum").style.color = "rgba(0,0,0,0.5)";
+    document.getElementById("dark-mode-p").style.color = "#000";
+    document.getElementById("dark-mode").style.background = "#fff";
+    document.getElementById("dark-mode").style.border = "2px solid #000";
+    document.getElementById("language-p").style.color = "#000";
+    document.getElementById("language").style.background = "#fff";
+    document.getElementById("language").style.border = "2px solid #000";
+  }
+});
+
+document.getElementById("language").addEventListener("click", function () {
+  if (document.getElementById("language").checked) {
+    document.getElementById("language-p").innerHTML = "POLSKI";
+    document.querySelector("h1").innerHTML = "Kalkulator podziału kosztów";
+    document.getElementById("btnNode").textContent = "Dodaj koszt";
+    document.getElementById("btnNode2").textContent = "Dodaj koszt";
+    document.getElementById("btnNode3").textContent = "Dodaj koszt";
+    document.getElementsByClassName("partial-total")[0].textContent =
+      "Produkty Izy";
+    document.getElementsByClassName("partial-total")[1].textContent =
+      "Produkty Kuby";
+    document.getElementsByClassName("partial-total")[2].textContent =
+      "Produkty wspólne";
+    document.getElementById("paid").textContent = "Kto zapłacił?";
+    document.getElementById("calculate").textContent = "Oblicz";
+    document.getElementById("label-rest").textContent = "Wspólne";
+    document.getElementById("grand-total").textContent = "Całkowity koszt";
+  } else {
+    document.getElementById("language-p").innerHTML = "ENGLISH";
+    document.querySelector("h1").innerHTML = "Expense splitting calculator";
+    document.getElementById("btnNode").textContent = "Add expense";
+    document.getElementById("btnNode2").textContent = "Add expense";
+    document.getElementById("btnNode3").textContent = "Add expense";
+    document.getElementsByClassName("partial-total")[0].textContent =
+      "Iza's total expense";
+    document.getElementsByClassName("partial-total")[1].textContent =
+      "Kuba's total expense";
+    document.getElementsByClassName("partial-total")[2].textContent =
+      "Total shared expense";
+    document.getElementById("paid").textContent = "Who paid?";
+    document.getElementById("calculate").textContent = "Calculate";
+    document.getElementById("label-rest").textContent = "Rest";
+    document.getElementById("grand-total").textContent = "Grand total";
+  }
 });

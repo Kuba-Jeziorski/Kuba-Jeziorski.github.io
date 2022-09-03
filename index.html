@@ -10,6 +10,16 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <div style="display: flex; flex-wrap: nowrap">
+        <div style="display: flex; flex-wrap: nowrap; align-items: center">
+          <input type="checkbox" id="dark-mode" />
+          <p id="dark-mode-p">DARK MODE</p>
+        </div>
+        <div style="display: flex; flex-wrap: nowrap; align-items: center">
+          <input type="checkbox" id="language" />
+          <p id="language-p">ENGLISH</p>
+        </div>
+      </div>
       <div class="banner">
         <h1>Expense splitting calculator</h1>
       </div>
@@ -33,22 +43,9 @@
 
           <div id="btnNode">ADD EXPENSE</div>
           <div class="expense-border">
-            <p
-              style="
-                text-transform: uppercase;
-                margin: 10px 0 0 0;
-                color: rgba(0, 0, 0, 0.3);
-              "
-            >
-              Iza's total expense:
-            </p>
+            <p class="partial-total">Iza's total expense:</p>
           </div>
-          <p
-            id="person1Sum"
-            style="margin: 5px 0 0 0; font-size: 21px; line-height: 29px"
-          >
-            0.00
-          </p>
+          <p id="person1Sum">0.00</p>
         </div>
         <div class="random">
           <div class="label-border">
@@ -66,26 +63,13 @@
           <!-- </label> -->
           <div id="btnNode2">ADD EXPENSE</div>
           <div class="expense-border">
-            <p
-              style="
-                text-transform: uppercase;
-                margin: 10px 0 0 0;
-                color: rgba(0, 0, 0, 0.3);
-              "
-            >
-              Kuba's total expense:
-            </p>
+            <p class="partial-total">Kuba's total expense:</p>
           </div>
-          <p
-            id="person2Sum"
-            style="margin: 5px 0 0 0; font-size: 21px; line-height: 29px"
-          >
-            0.00
-          </p>
+          <p id="person2Sum">0.00</p>
         </div>
         <div class="random">
           <div class="label-border">
-            <label>Rest</label>
+            <label id="label-rest">Rest</label>
           </div>
           <div id="bigBox3">
             <input
@@ -98,26 +82,13 @@
           </div>
           <div id="btnNode3">ADD EXPENSE</div>
           <div class="expense-border">
-            <p
-              style="
-                text-transform: uppercase;
-                margin: 10px 0 0 0;
-                color: rgba(0, 0, 0, 0.3);
-              "
-            >
-              Total shared expense:
-            </p>
+            <p class="partial-total">Total shared expense:</p>
           </div>
-          <p
-            id="restSum"
-            style="margin: 5px 0 0 0; font-size: 21px; line-height: 29px"
-          >
-            0.00
-          </p>
+          <p id="restSum">0.00</p>
         </div>
         <div class="random">
           <div class="label-border">
-            <p class="change-later" style="margin: 0">Who paid?</p>
+            <p id="paid" style="margin: 0">Who paid?</p>
           </div>
           <div id="radio-container">
             <input type="radio" name="testowe" id="radio1" />
@@ -129,7 +100,7 @@
           </div>
         </div>
         <button type="submit" id="btnSum">
-          <p>CALCULATE</p>
+          <p id="calculate">CALCULATE</p>
         </button>
       </form>
       <div id="settle-up">
@@ -138,18 +109,7 @@
           style="text-transform: uppercase; color: #fff; margin: 0 0 10px 0"
         ></p>
         <div class="expense-border">
-          <p
-            style="
-              text-transform: uppercase;
-              font-weight: 600;
-              font-size: 13px;
-              line-height: 18px;
-              color: #fff;
-              margin: 20px 0 0 0;
-            "
-          >
-            Grand total
-          </p>
+          <p id="grand-total">Grand total</p>
         </div>
         <p id="wholeSum" style="margin: 0">0.00z</p>
       </div>
