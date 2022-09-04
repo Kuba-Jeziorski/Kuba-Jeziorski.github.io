@@ -109,12 +109,15 @@ input[type="number"] {
   padding: 1px 0;
 }
 
+input[type="number"]::placeholder {
+  text-align: center;
+}
+
 input[type="number"]:first-child {
   margin: 10px 0 5px 0;
 }
 
 input[type="number"]:focus,
-/* input[type="number"]:focus-visible, */
 input[type="number"]:active {
   border: 1px solid #343ed2 !important;
   outline: none;
@@ -129,7 +132,12 @@ input:focus::placeholder {
   color: transparent;
 }
 
-/* input[type="number"]:not(:first-child) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
 .main-wrapper {
   max-width: 1200px;
@@ -263,6 +271,7 @@ p#sentence {
 .PersonText2,
 .PersonText3 {
   margin: 5px 0;
+  width: 100%;
 }
 
 #radio-container,
@@ -322,6 +331,28 @@ input[type="checkbox"]:checked#dark-mode:after {
   flex-wrap: nowrap;
   align-items: center;
   padding: 0 0 0 15px;
+}
+
+.text-out,
+.text-out2,
+.text-out3 {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 0 2px 0;
+  margin: 5px auto;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 @media (max-width: 1200px) {

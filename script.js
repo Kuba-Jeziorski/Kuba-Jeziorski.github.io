@@ -12,24 +12,44 @@ const prsText3 = document.getElementsByClassName("PersonText3");
 const buttonN3 = document.getElementById("btnNode3");
 const bBox3 = document.getElementById("bigBox3");
 
-const nodeF = function (person, wrapper) {
+const textOut = document.getElementsByClassName("text-out");
+const textOut2 = document.getElementsByClassName("text-out2");
+const textOut3 = document.getElementsByClassName("text-out3");
+
+const nodeF = function (person, wrapper, out) {
   const newBox = person[0].cloneNode(true);
   newBox.value = "";
   wrapper.appendChild(newBox);
   newBox.focus();
+  const newerBox = out[0].cloneNode(true);
+  wrapper.appendChild(newerBox);
 };
 
-// adding new text inputs
+const delText = function (prs, out) {
+  for (let i = 0; i < out.length; i++) {
+    out[i].addEventListener("click", function () {
+      prs[i].value = "";
+    });
+  }
+};
+
+delText(prsText, textOut);
+delText(prsText2, textOut2);
+delText(prsText3, textOut3);
+
 buttonN.addEventListener("click", function () {
-  nodeF(prsText, bBox);
+  nodeF(prsText, bBox, textOut);
+  delText(prsText, textOut);
 });
 
 buttonN2.addEventListener("click", function () {
-  nodeF(prsText2, bBox2);
+  nodeF(prsText2, bBox2, textOut2);
+  delText(prsText2, textOut2);
 });
 
 buttonN3.addEventListener("click", function () {
-  nodeF(prsText3, bBox3);
+  nodeF(prsText3, bBox3, textOut3);
+  delText(prsText3, textOut3);
 });
 
 // sum of text inputs (arrays)
