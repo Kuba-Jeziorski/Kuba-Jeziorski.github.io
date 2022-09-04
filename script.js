@@ -28,14 +28,11 @@ const nodeF = function (person, wrapper, out) {
 const delText = function (prs, out) {
   for (let i = 0; i < out.length; i++) {
     out[i].addEventListener("click", function () {
-      prs[i].value = "";
+      prs[i].style.display = "none";
+      out[i].style.display = "none";
     });
   }
 };
-
-delText(prsText, textOut);
-delText(prsText2, textOut2);
-delText(prsText3, textOut3);
 
 buttonN.addEventListener("click", function () {
   nodeF(prsText, bBox, textOut);
