@@ -26,7 +26,7 @@ const nodeF = function (person, wrapper, out) {
 };
 
 const delText = function (prs, out) {
-  for (let i = 0; i < out.length; i++) {
+  for (let i = 1; i < out.length; i++) {
     out[i].addEventListener("click", function () {
       prs[i].style.display = "none";
       out[i].style.display = "none";
