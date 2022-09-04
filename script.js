@@ -120,7 +120,8 @@ document.getElementById("dark-mode").addEventListener("click", function () {
     document.getElementById("dark-mode-p").style.color = "#fff";
     document.getElementById("dark-mode").style.background = "#000";
     document.getElementById("dark-mode").style.border = "2px solid #fff";
-    document.getElementById("language-p").style.color = "#fff";
+    document.getElementById("language-p1").style.color = "#fff";
+    document.getElementById("language-p1").style.color = "#fff";
     document.getElementById("language").style.background = "#000";
     document.getElementById("language").style.border = "2px solid #fff";
     // document.getElementsByClassName("PersonText").style.background = "red";
@@ -138,7 +139,8 @@ document.getElementById("dark-mode").addEventListener("click", function () {
     document.getElementById("dark-mode-p").style.color = "#000";
     document.getElementById("dark-mode").style.background = "#fff";
     document.getElementById("dark-mode").style.border = "2px solid #000";
-    document.getElementById("language-p").style.color = "#000";
+    document.getElementById("language-p1").style.color = "#000";
+    document.getElementById("language-p2").style.color = "#000";
     document.getElementById("language").style.background = "#fff";
     document.getElementById("language").style.border = "2px solid #000";
   }
@@ -146,7 +148,7 @@ document.getElementById("dark-mode").addEventListener("click", function () {
 
 document.getElementById("language").addEventListener("click", function () {
   if (document.getElementById("language").checked) {
-    document.getElementById("language-p").innerHTML = "POLSKI";
+    // document.getElementById("language-p").innerHTML = "POLSKI";
     document.querySelector("h1").innerHTML = "Kalkulator podziału kosztów";
     document.getElementById("btnNode").textContent = "Dodaj koszt";
     document.getElementById("btnNode2").textContent = "Dodaj koszt";
@@ -162,7 +164,7 @@ document.getElementById("language").addEventListener("click", function () {
     document.getElementById("label-rest").textContent = "Wspólne";
     document.getElementById("grand-total").textContent = "Całkowity koszt";
   } else {
-    document.getElementById("language-p").innerHTML = "ENGLISH";
+    // document.getElementById("language-p").innerHTML = "ENGLISH";
     document.querySelector("h1").innerHTML = "Expense splitting calculator";
     document.getElementById("btnNode").textContent = "Add expense";
     document.getElementById("btnNode2").textContent = "Add expense";
