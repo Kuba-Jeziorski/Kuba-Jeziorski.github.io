@@ -16,6 +16,7 @@ const nodeF = function (person, wrapper) {
   const newBox = person[0].cloneNode(true);
   newBox.value = "";
   wrapper.appendChild(newBox);
+  newBox.focus();
 };
 
 // adding new text inputs
@@ -105,6 +106,7 @@ document.getElementById("dark-mode").addEventListener("click", function () {
     document.getElementById("language-p").style.color = "#fff";
     document.getElementById("language").style.background = "#000";
     document.getElementById("language").style.border = "2px solid #fff";
+    // document.getElementsByClassName("PersonText").style.background = "red";
   } else {
     document.body.style.background = "#fff";
     document.getElementsByClassName("partial-total")[0].style.color =
