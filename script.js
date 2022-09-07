@@ -49,9 +49,10 @@ buttonN3.addEventListener("click", function () {
   delText(prsText3, textOut3);
 });
 
-// sum of text inputs (arrays)
-document.getElementById("mainForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+const mainFunction = function (e) {
+  if (e) {
+    e.preventDefault();
+  }
   let sum = 0;
   let sum2 = 0;
   let sum3 = 0;
@@ -105,6 +106,10 @@ document.getElementById("mainForm").addEventListener("submit", function (e) {
   }
 
   document.getElementById("settle-up").style.display = "block";
+};
+
+document.getElementById("mainForm").addEventListener("submit", function (e) {
+  mainFunction(e);
   window.scrollBy(0, 200);
 });
 
@@ -124,7 +129,6 @@ document.getElementById("dark-mode").addEventListener("click", function () {
     document.getElementById("language-p1").style.color = "#fff";
     document.getElementById("language").style.background = "#000";
     document.getElementById("language").style.border = "2px solid #fff";
-    // document.getElementsByClassName("PersonText").style.background = "red";
   } else {
     document.body.style.background = "#fff";
     document.getElementsByClassName("partial-total")[0].style.color =
@@ -146,9 +150,9 @@ document.getElementById("dark-mode").addEventListener("click", function () {
   }
 });
 
-document.getElementById("language").addEventListener("click", function () {
+document.getElementById("language").addEventListener("click", function (e) {
   if (document.getElementById("language").checked) {
-    // document.getElementById("language-p").innerHTML = "POLSKI";
+    mainFunction();
     document.querySelector("h1").innerHTML = "Kalkulator podziału kosztów";
     document.getElementById("btnNode").textContent = "Dodaj koszt";
     document.getElementById("btnNode2").textContent = "Dodaj koszt";
@@ -164,7 +168,6 @@ document.getElementById("language").addEventListener("click", function () {
     document.getElementById("label-rest").textContent = "Wspólne";
     document.getElementById("grand-total").textContent = "Całkowity koszt";
   } else {
-    // document.getElementById("language-p").innerHTML = "ENGLISH";
     document.querySelector("h1").innerHTML = "Expense splitting calculator";
     document.getElementById("btnNode").textContent = "Add expense";
     document.getElementById("btnNode2").textContent = "Add expense";
