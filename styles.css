@@ -233,7 +233,7 @@ p#sentence {
   font-size: 23px;
 }
 
-.random {
+.section {
   width: 100%;
   margin: 0 0 20px 0;
   padding: 0 0 0 5px;
@@ -347,7 +347,7 @@ input[type="checkbox"]:checked#dark-mode:after {
   font-weight: bold;
   cursor: pointer;
   padding: 0 0 2px 0;
-  margin: 5px auto;
+  margin: 5px 0 0 5px;
 }
 
 .box-wrapper {

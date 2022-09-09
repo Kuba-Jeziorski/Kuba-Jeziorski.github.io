@@ -16,37 +16,61 @@ const textOut = document.getElementsByClassName("text-out");
 const textOut2 = document.getElementsByClassName("text-out2");
 const textOut3 = document.getElementsByClassName("text-out3");
 
-const nodeF = function (person, wrapper, out) {
-  const newBox = person[0].cloneNode(true);
-  newBox.value = "";
-  wrapper.appendChild(newBox);
-  newBox.focus();
-  const newerBox = out[0].cloneNode(true);
-  wrapper.appendChild(newerBox);
+const nodeTry = document.getElementsByClassName("nodeTry");
+const nodeTry2 = document.getElementsByClassName("nodeTry2");
+const nodeTry3 = document.getElementsByClassName("nodeTry3");
+
+// zapytać o to
+// const inputNumber = document.querySelectorAll("input[name='abc']");
+// for (let element of inputNumber) {
+//   element.addEventListener("change", (e) => {
+//     e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
+//   });
+// }
+
+const nodeF = function (inner, outer) {
+  const tryBox = inner[0].cloneNode(true);
+  outer.appendChild(tryBox);
 };
 
 const delText = function (prs, out) {
-  for (let i = 1; i < out.length; i++) {
+  for (let i = 0; i < out.length; i++) {
     out[i].addEventListener("click", function () {
-      prs[i].style.display = "none";
-      out[i].style.display = "none";
+      if (i === 0) {
+        prs[i].value = "";
+        out[i].style.display = "flex";
+      } else {
+        prs[i].style.display = "none";
+        out[i].style.display = "none";
+      }
     });
   }
 };
-
+let functionCalled = 0;
 buttonN.addEventListener("click", function () {
-  nodeF(prsText, bBox, textOut);
+  functionCalled++;
+  nodeF(nodeTry, bBox);
   delText(prsText, textOut);
+  prsText[functionCalled].value = "";
+  prsText[functionCalled].focus();
 });
 
+let functionCalled2 = 0;
 buttonN2.addEventListener("click", function () {
-  nodeF(prsText2, bBox2, textOut2);
+  functionCalled2++;
+  nodeF(nodeTry2, bBox2);
   delText(prsText2, textOut2);
+  prsText2[functionCalled2].value = "";
+  prsText2[functionCalled2].focus();
 });
 
+let functionCalled3 = 0;
 buttonN3.addEventListener("click", function () {
-  nodeF(prsText3, bBox3, textOut3);
+  functionCalled3++;
+  nodeF(nodeTry3, bBox3);
   delText(prsText3, textOut3);
+  prsText3[functionCalled3].value = "";
+  prsText3[functionCalled3].focus();
 });
 
 const mainFunction = function (e) {
