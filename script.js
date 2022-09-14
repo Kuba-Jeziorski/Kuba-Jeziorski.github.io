@@ -21,12 +21,12 @@ const nodeTry2 = document.getElementsByClassName("nodeTry2");
 const nodeTry3 = document.getElementsByClassName("nodeTry3");
 
 // zapytać o to
-// const inputNumber = document.querySelectorAll("input[name='abc']");
-// for (let element of inputNumber) {
-//   element.addEventListener("change", (e) => {
-//     e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
-//   });
-// }
+const inputNumber = document.getElementsByClassName("PersonText");
+for (let element of inputNumber) {
+  element.addEventListener("change", (e) => {
+    e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
+  });
+}
 
 const nodeF = function (inner, outer) {
   const tryBox = inner[0].cloneNode(true);
@@ -52,6 +52,12 @@ buttonN.addEventListener("click", function () {
   nodeF(nodeTry, bBox);
   delText(prsText, textOut);
   prsText[functionCalled].value = "";
+
+  for (let element of inputNumber) {
+    element.addEventListener("change", (e) => {
+      e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
+    });
+  }
   prsText[functionCalled].focus();
 });
 
@@ -61,6 +67,7 @@ buttonN2.addEventListener("click", function () {
   nodeF(nodeTry2, bBox2);
   delText(prsText2, textOut2);
   prsText2[functionCalled2].value = "";
+
   prsText2[functionCalled2].focus();
 });
 
