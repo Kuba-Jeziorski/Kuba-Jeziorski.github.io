@@ -20,9 +20,23 @@ const nodeTry = document.getElementsByClassName("nodeTry");
 const nodeTry2 = document.getElementsByClassName("nodeTry2");
 const nodeTry3 = document.getElementsByClassName("nodeTry3");
 
-// zapytać o to
 const inputNumber = document.getElementsByClassName("PersonText");
+const inputNumber2 = document.getElementsByClassName("PersonText2");
+const inputNumber3 = document.getElementsByClassName("PersonText3");
+
 for (let element of inputNumber) {
+  element.addEventListener("change", (e) => {
+    e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
+  });
+}
+
+for (let element of inputNumber2) {
+  element.addEventListener("change", (e) => {
+    e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
+  });
+}
+
+for (let element of inputNumber3) {
   element.addEventListener("change", (e) => {
     e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
   });
@@ -46,6 +60,11 @@ const delText = function (prs, out) {
     });
   }
 };
+
+delText(prsText, textOut);
+delText(prsText2, textOut2);
+delText(prsText3, textOut3);
+
 let functionCalled = 0;
 buttonN.addEventListener("click", function () {
   functionCalled++;
@@ -68,6 +87,12 @@ buttonN2.addEventListener("click", function () {
   delText(prsText2, textOut2);
   prsText2[functionCalled2].value = "";
 
+  for (let element of inputNumber2) {
+    element.addEventListener("change", (e) => {
+      e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
+    });
+  }
+
   prsText2[functionCalled2].focus();
 });
 
@@ -77,6 +102,11 @@ buttonN3.addEventListener("click", function () {
   nodeF(nodeTry3, bBox3);
   delText(prsText3, textOut3);
   prsText3[functionCalled3].value = "";
+  for (let element of inputNumber3) {
+    element.addEventListener("change", (e) => {
+      e.currentTarget.value = parseFloat(e.currentTarget.value).toFixed(2);
+    });
+  }
   prsText3[functionCalled3].focus();
 });
 
