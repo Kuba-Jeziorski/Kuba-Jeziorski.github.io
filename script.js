@@ -54,6 +54,7 @@ const delText = function (prs, out) {
         prs[i].value = "";
         out[i].style.display = "flex";
       } else {
+        prs[i].value = 0;
         prs[i].style.display = "none";
         out[i].style.display = "none";
       }
