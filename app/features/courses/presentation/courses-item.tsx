@@ -40,7 +40,9 @@ export default function CoursesItem({ course }: Props) {
         </div>
       )}
       <div className="flex align-items-center gap-4 mt-auto">
-        <CustomLink url={certificate_url}>Certificate</CustomLink>
+        <CustomLink url={certificate_url} isExternal>
+          Certificate
+        </CustomLink>
       </div>
     </div>
   );
