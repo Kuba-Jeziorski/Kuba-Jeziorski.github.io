@@ -13,7 +13,7 @@ export default function CoursesItem({ course }: Props) {
 
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-slate-400/20 bg-card-surface p-4">
-      <div className="flex items-center gap-4 mb-4">
+      <div className="flex items-center gap-2 sm:gap-4 mb-4">
         {icon && (
           <div className="w-15 h-15 rounded-xl bg-secondary-text p-2 flex items-center justify-center">
             <div className="relative w-full h-full">
