@@ -3,5 +3,6 @@ export type Course = {
   name: string;
   description: string;
   stack: string[];
-  certificate_url: string;
+  certificate_url?: string;
+  state?: string;
 };
