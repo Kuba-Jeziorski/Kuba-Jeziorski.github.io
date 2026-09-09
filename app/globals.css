@@ -23,7 +23,7 @@
   --spacing-nav-height: 72px;
 
   /* Breakpoints */
-  /* --breakpoint-custom-1700: 1700px; */
+  --breakpoint-custom-375: 375px;
 }
 
 body {

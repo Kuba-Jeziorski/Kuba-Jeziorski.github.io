@@ -21,7 +21,7 @@ export const Navigation = () => {
 
   return (
     <nav className="w-full bg-canvas-background pt-4 border-b border-b-slate-400/20 h-nav-height fixed top-0 left-0 shadow-[0_2px_4px_rgba(0,0,0,0.05)] z-50">
-      <div className="w-full max-w-375 mx-auto h-full">
+      <div className="w-full max-w-full px-6 2xl:px-0 2xl:max-w-375 mx-auto h-full">
         <div className="w-full flex justify-between gap-6 h-full">
           <Link
             href="/"
@@ -36,7 +36,7 @@ export const Navigation = () => {
               </p>
             </div>
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="hidden sm:flex items-center gap-6" data-nav="desktop">
             <Link
               href="/projects"
               className={linkClasses(pathname, "/projects")}
@@ -52,6 +52,9 @@ export const Navigation = () => {
             <Link href="/cv" className={linkClasses(pathname, "/cv")}>
               CV
             </Link>
+          </div>
+          <div className="flex sm:hidden" data-nav="mobile">
+            mobile
           </div>
         </div>
       </div>

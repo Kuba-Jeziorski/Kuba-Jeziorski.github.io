@@ -48,7 +48,7 @@ export default function ProjectsItem({ project }: Props) {
           <Badges badges={technologies} />
         </div>
         <p className="text-secondary-text mb-8">{description}</p>
-        <div className="flex align-items-center gap-4 mt-auto">
+        <div className="flex items-center flex-col custom-375:flex-row gap-4 mt-auto">
           <CustomLink url={github_url} isExternal>
             Repository
           </CustomLink>

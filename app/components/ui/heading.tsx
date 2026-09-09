@@ -9,9 +9,9 @@ type Props = {
 };
 
 const variantStyles = {
-  h1: "text-4xl font-bold mb-4",
-  h2: "text-3xl font-semibold",
-  h3: "text-2xl font-medium mb-2",
+  h1: "text-2xl custom-375:text-3xl md:text-4xl font-bold mb-4",
+  h2: "text-2xl md:text-3xl font-semibold",
+  h3: "text-xl md:text-2xl font-medium mb-2",
 };
 
 export default function Heading({ children, variant, className }: Props) {

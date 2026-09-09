@@ -9,7 +9,7 @@ type Props = {
 };
 
 const linkClasses =
-  "flex px-4 py-2 font bg-primary-accent rounded-xl border-none transition-filter duration-300 hover:brightness-125";
+  "flex w-full sm:w-auto justify-center px-4 py-2 font bg-primary-accent rounded-xl border-none transition-filter duration-300 hover:brightness-125";
 
 export default function CustomLink({
   children,
